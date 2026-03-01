@@ -5,5 +5,22 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
 
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px;
+}
+
+input {
+    padding: 8px;
+    width: 70%;
+}
+
+button {
+    padding: 8px 12px;
+    cursor: pointer;
 }
