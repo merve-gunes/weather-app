@@ -2,9 +2,14 @@ const cityInput = document.getElementById("cityInput");
 const searchBtn = document.getElementById("searchBtn");
 const weatherResult = document.getElementById("weatherResult");
 
-
 const apiKey = config.API_KEY; 
 const baseUrl = "https://api.openweathermap.org/data/2.5/weather";
+
+cityInput.addEventListener("keypress", (e) => {
+if(e.key ===  "Enter") {
+    searchBtn.click();
+}
+});
 
 searchBtn.addEventListener("click", () => {
     const city = cityInput.value.trim(); 
@@ -21,7 +26,7 @@ function getWeatherData(city) {
     console.log(url);
     console.log("şehir:",city);
 
-    weatherResult.innerHTML = `<p>Veriler getiriliyor...<p>`;
+    weatherResult.innerHTML = `<p>Veriler getiriliyor...</p>`;
 
 fetch(url)
     .then(response => {
